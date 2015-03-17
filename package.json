@@ -1,0 +1,24 @@
+{
+  "name": "youtube-radio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "/public/index.html",
+  "dependencies": {
+    "googleapis": "^2.0.2",
+    "html-loader": "^0.2.3",
+    "jsx-loader": "^0.12.2",
+    "react": "^0.12.2",
+    "react-bootstrap": "^0.14.0",
+    "react-router": "^0.12.0"
+  },
+  "devDependencies": {
+    "react-hot-loader": "^1.1.5",
+    "webpack": "^1.5.3",
+    "webpack-dev-server": "^1.7.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Seb Brown",
+  "license": "ISC"
+}
