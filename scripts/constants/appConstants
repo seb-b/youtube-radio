@@ -1,0 +1,5 @@
+var appConstants = {
+  FIREBASE_HOST: 'https://youtube-react-radio.firebaseio.com/'
+};
+
+module.exports = appConstants;

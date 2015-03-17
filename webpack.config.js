@@ -1,20 +1,20 @@
 var webpack = require('webpack');
 
 module.exports = {
-  devtool: "#inline-source-map",
+  devtool: '#inline-source-map',
   entry:[
     'webpack-dev-server/client?http://0.0.0.0:3000', // WebpackDevServer host and port
     'webpack/hot/only-dev-server',
-    './scripts/index' // Your appʼs entry point
+    './scripts/index'
   ],
   output: {
-    path: __dirname + "/scripts/",
-    filename: "bundle.js",
-    publicPath: "/scripts/"
+    path: __dirname + '/public/',
+    filename: 'bundle.js',
+    publicPath: '/public/'
   },
   module: {
     loaders: [
-      { test: /\.html$/,loader:"html-loader" },
+      { test: /\.html$/, loader:'html-loader'},
       { test: /\.js$/, loaders: ['react-hot', 'jsx?harmony'], exclude: /node_modules/ }
     ]
   },

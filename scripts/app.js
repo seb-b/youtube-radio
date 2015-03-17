@@ -1,11 +1,11 @@
-var React = require('react'),
-   RouteHandler = require('react-router'),
-
+var React = require('react');
+var RouteHandler = require('react-router');
 
 var App = React.createClass({
-  render() { 
+  render() {
     return (
       <div>
+        {/*header or menu?? */}
         <RouteHandler />
       </div>
     );
