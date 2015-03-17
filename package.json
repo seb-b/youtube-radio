@@ -4,6 +4,7 @@
   "description": "",
   "main": "/public/index.html",
   "dependencies": {
+    "firebase": "^2.2.2",
     "googleapis": "^2.0.2",
     "html-loader": "^0.2.3",
     "jsx-loader": "^0.12.2",
