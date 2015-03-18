@@ -1,6 +1,6 @@
 var React = require('react');
-var appConstants = require('./constants/appConstants');
 var VideoList = require('./components/VideoList');
+var firebaseUtils = require('./utils/firebaseUtils');
 
 var Start = React.createClass({
 
@@ -11,11 +11,13 @@ var Start = React.createClass({
   },
 
   componentWillMount: function() {
-    //TODO: change to firebase
-    this.setState({
-      ids: appConstants._TESTING_IDS
-    });
+    var initIds = firebaseUtils.getIds(this.receivedIds);
   },
+
+  receivedIds: function(data)
+  {
+    debugger;
+  }
 
   render: function() {
     return (

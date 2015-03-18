@@ -3,6 +3,7 @@ var VideoListItem = require('./VideoListItem');
 var ReactBootstrap = require('react-bootstrap');
 var Grid = ReactBootstrap.Grid;
 var Row = ReactBootstrap.Row;
+//var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
 var VideoList = React.createClass({
   propTypes: {
@@ -13,7 +14,13 @@ var VideoList = React.createClass({
     var videoList = this.props.videoIds.map((id, index) => {
       return <VideoListItem videoId={id} key={index} />
     });
-    return <Grid><Row>{videoList}</Row></Grid>
+    return (
+
+        <Grid>
+          <Row>{videoList}</Row>
+        </Grid>
+
+    );
   }
 
 });

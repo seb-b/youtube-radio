@@ -1,3 +1,5 @@
+/*player*/
+
 div.playerContainer{
   width: 100%;
   height: 100%;
@@ -13,11 +15,31 @@ div.player{
   background: black;
 }
 
+
+/*Footer*/
 div.footer{
   position: absolute;
   bottom: 0px;
 }
 
-div.footer h5 {
-  color: white;
+div.footer div.form-group{
+  margin: 0px 15px;
+  z-index: 50;
+}
+
+div.footer button{
+  z-index: 100;
+}
+
+/*video list */
+
+div.well h4.title{
+  color: black;
+  margin-top: 0px;
+  text-align: center;
+}
+
+div.well img{
+  display: block;
+  margin: auto;
 }
