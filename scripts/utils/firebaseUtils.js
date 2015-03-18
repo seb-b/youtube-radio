@@ -1,5 +1,4 @@
 var Firebase = require('firebase');
-var appConstants = require('../constants/appConstants');
 
 var firebaseHost = 'https://youtube-react-radio.firebaseio.com/';
 
