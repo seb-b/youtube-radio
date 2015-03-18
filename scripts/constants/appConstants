@@ -1,7 +1,0 @@
-var appConstants = {
-  _TESTING_IDS: ['PmRraoL9v7k', 'xiV0RN0mPSk', 'yMyz8xVp8-s',
-                'MbrUzJlTffs', 'KHsEQmWSRTs', '_L2vJEb6lVE',
-                'jF8bXI4Obkg', 'NHfWY0is3rE', 'CZa2lY9CFyM']
-};
-
-module.exports = appConstants;

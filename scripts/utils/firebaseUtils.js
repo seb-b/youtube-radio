@@ -1,7 +1,7 @@
 var Firebase = require('firebase');
 var appConstants = require('../constants/appConstants');
 
-var firebaseHost = 'https://youtube-react-radio.firebaseio.com/'
+var firebaseHost = 'https://youtube-react-radio.firebaseio.com/';
 
 var firebaseUtils = {
 
@@ -15,6 +15,7 @@ var firebaseUtils = {
   },
 
   removeId: function(youtubeId, cb) {
+    //FIXME there must be an easier way to query on value
     this.homeInstance().child('seb')
       .orderByValue().equalTo(youtubeId)
         .once('value', function(snapshot){
