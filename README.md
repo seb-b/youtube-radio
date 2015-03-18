@@ -9,4 +9,4 @@ npm install -> node server.js to start
 - css transitions for adding/deleting videos
 - feedback for adding currently playing video
 - feedback for adding new url
-- validation on add url
+- prevent duplicates
