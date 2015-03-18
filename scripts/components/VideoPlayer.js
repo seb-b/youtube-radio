@@ -24,7 +24,6 @@ var VideoPlayer = React.createClass({
     data.items.forEach(function(video) {
       currentQueue.push(video.id.videoId);
     });
-
     this.setState({
       queuedIds: currentQueue
     });
@@ -49,7 +48,7 @@ var VideoPlayer = React.createClass({
 
   render: function() {
     return (
-      <Youtube url={`http://www.youtube.com/watch?v=${this.state.id}`} onVideoReady={this.getSuggestions} onEnd={this.onVideoEnd} />
+      <Youtube autoplay={true} url={`http://www.youtube.com/watch?v=${this.state.id}`} onPlay={this.getSuggestions} onEnd={this.onVideoEnd} />
     );
   }
 });
