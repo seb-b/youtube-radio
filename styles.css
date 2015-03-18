@@ -15,20 +15,26 @@ div.player{
   background: black;
 }
 
-div.player a.next{
-  color: white;
+div.player a.control{
   position: absolute;
-  right: -30px;
-  top: 45%;
   height: 30px;
   width: 30px;
-  background: red;
-  border-radius: 0px 20px 20px 0px;
   cursor: pointer;
+  top: 45%;
 }
 
-div.player a.next span{
-  margin-left: 7px;
+div.player a.back{
+  left: -30px;
+  border-radius: 20px 0px 0px 20px;
+}
+
+div.player a.next{
+  right: -30px;
+  border-radius: 0px 20px 20px 0px;
+}
+
+div.player a.control span{
+  margin-left: 8px;
   margin-top: 6px;
 }
 

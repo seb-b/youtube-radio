@@ -3,6 +3,7 @@ var Youtube = require('react-youtube');
 var youtubeUtils = require('../utils/youtubeUtils');
 var Navigation = require('react-router').Navigation;
 var Glyphicon = require('react-bootstrap').Glyphicon;
+var Link = require('react-router').Link;
 
 var VideoPlayer = React.createClass({
 
@@ -56,16 +57,23 @@ var VideoPlayer = React.createClass({
   render: function() {
     return (
       <div>
-      <Youtube
-        autoplay={true}
-        url={`http://www.youtube.com/watch?v=${this.state.id}`}
-        onPlay={this.getSuggestions}
-        onEnd={this.onVideoEnd} />
-      <a
-        className="next"
-        onClick={this.onVideoEnd}>
-        <Glyphicon glyph="forward" /></a>
-        </div>
+        <Link
+          to="start"
+          className="control back btn-primary"
+          title="back to radio selction">
+          <Glyphicon glyph="menu-hamburger" />
+          </Link>
+        <Youtube
+          autoplay={true}
+          url={`http://www.youtube.com/watch?v=${this.state.id}`}
+          onPlay={this.getSuggestions}
+          onEnd={this.onVideoEnd} />
+        <a
+          className="control next btn-danger"
+          onClick={this.onVideoEnd}
+          title="next video">
+          <Glyphicon glyph="forward" /></a>
+      </div>
     );
   }
 });
