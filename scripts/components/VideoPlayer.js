@@ -1,6 +1,7 @@
 var React = require('react');
 var Youtube = require('react-youtube');
 var youtubeUtils = require('../utils/youtubeUtils');
+var firebaseUtils = require('../utils/firebaseUtils');
 var Navigation = require('react-router').Navigation;
 var Glyphicon = require('react-bootstrap').Glyphicon;
 var Link = require('react-router').Link;
@@ -54,15 +55,26 @@ var VideoPlayer = React.createClass({
     });
   },
 
+  addCurrent: function(e){
+    e.preventDefault();
+    firebaseUtils.addId(this.state.id);
+  },
+
   render: function() {
     return (
       <div>
+        <a
+          className="control add btn-success"
+          onClick={this.addCurrent}
+          title="add this video as a radio">
+          <Glyphicon glyph="star" />
+        </a>
         <Link
           to="start"
           className="control back btn-primary"
           title="back to radio selction">
           <Glyphicon glyph="menu-hamburger" />
-          </Link>
+        </Link>
         <Youtube
           autoplay={true}
           url={`http://www.youtube.com/watch?v=${this.state.id}`}
@@ -72,7 +84,8 @@ var VideoPlayer = React.createClass({
           className="control next btn-danger"
           onClick={this.onVideoEnd}
           title="next video">
-          <Glyphicon glyph="forward" /></a>
+          <Glyphicon glyph="forward" />
+        </a>
       </div>
     );
   }

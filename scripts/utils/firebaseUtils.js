@@ -25,9 +25,8 @@ var firebaseUtils = {
 
   removeViaKey: function(key, cb) {
     this.homeInstance().child('seb').child(key).remove();
-    //this is shit, need to find a way to reload parent.
+    //this is shit, this callback goes 3 levels deep
     //FIXME flux would fix this
-    debugger;
     cb();
   },
 

@@ -1,7 +1,6 @@
 var React = require('react');
 var VideoList = require('./components/VideoList');
 var firebaseUtils = require('./utils/firebaseUtils');
-
 var Start = React.createClass({
 
   getInitialState: function() {
@@ -11,7 +10,6 @@ var Start = React.createClass({
   },
 
   getVideoIds: function(){
-    debugger;
     firebaseUtils.getIds(this.receivedIds);
   },
 
@@ -21,7 +19,6 @@ var Start = React.createClass({
 
   receivedIds: function(data)
   {
-    debugger;
     this.setState({
       ids: data
     });
@@ -30,6 +27,8 @@ var Start = React.createClass({
   render: function() {
     return (
       <div className="start">
+        <h2 className="header">Pick a video to start a radio <small> Enjoy :)</small></h2>
+        <hr className="header"/>
         <VideoList videoIds={this.state.ids} deleteCallback={this.getVideoIds} />
       </div>
     );

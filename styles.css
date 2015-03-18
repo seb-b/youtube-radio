@@ -33,9 +33,24 @@ div.player a.next{
   border-radius: 0px 20px 20px 0px;
 }
 
+div.player a.add{
+  top: -30px;
+  left: 48%;
+  border-radius: 20px 20px 0px 0px;
+}
+
 div.player a.control span{
   margin-left: 8px;
   margin-top: 6px;
+}
+
+div.player a.add span{
+  margin-top:7px;
+}
+
+div.player a.back span{
+  margin-top: 7px;
+  margin-left: 10px;
 }
 
 /*Footer*/
@@ -46,7 +61,7 @@ div.footer{
 }
 
 div.footer div.form-group{
-  margin: 0px 15px;
+  margin: 0px 20px;
 }
 
 div.footer button{
@@ -68,11 +83,13 @@ div.well img{
 }
 
 div.start{
-  padding-top: 10px;
   background: rgb(90, 132, 179);
   padding-bottom: 20px;
-  position: absolute;
-  height: 100%;
+  position: fixed;
+  /*always 100% of viewport */
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
   width: 100%;
 }
 
@@ -86,4 +103,16 @@ span.delete{
 span.delete:hover{
   color: #c9302c;
   cursor: pointer;
+}
+
+/*header*/
+h2.header{
+  margin: 0;
+  padding-bottom: 3px;
+  padding-top: 10px;
+  background: rgb(170, 199, 231);
+}
+
+hr.header{
+  margin-top: 0;
 }

@@ -13,7 +13,10 @@ var Footer = React.createClass({
     var url = this.refs.add.getValue();
     var startIndex = url.indexOf('v=') + 2;
     var id = url.substr(startIndex, startIndex + 11);
+
     firebaseUtils.addId(id);
+    this.refs.add.getDOMNode()
+      .getElementsByTagName('input')[0].value = '';
   },
 
   render: function() {

@@ -5,9 +5,9 @@ var Footer = require('./components/Footer');
 var App = React.createClass({
   render: function() {
     return (
-      <div>
-        <Footer />
+      <div className="body">
         <RouteHandler />
+        <Footer />
       </div>
     );
   }
