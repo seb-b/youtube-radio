@@ -4,7 +4,7 @@ var firebaseUtils = require('./utils/firebaseUtils');
 
 var Start = React.createClass({
 
-  setInitialState: function() {
+  getInitialState: function() {
     return {
       ids: []
     };
@@ -16,8 +16,10 @@ var Start = React.createClass({
 
   receivedIds: function(data)
   {
-    debugger;
-  }
+    this.setState({
+      ids: data
+    });
+  },
 
   render: function() {
     return (

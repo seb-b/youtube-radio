@@ -15,9 +15,13 @@ var firebaseUtils = {
   },
 
   getIds: function(cb) {
-    debugger;
     this.homeInstance().child('seb').on('value', function(snapshot) {
-      cb(snapshot.val());
+      var idObj = snapshot.val();
+      var arr = [];
+      for(var key in idObj){
+        arr.push(idObj[key]);
+      }
+      cb(arr);
     });
   }
 };
