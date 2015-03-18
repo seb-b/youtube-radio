@@ -1,9 +1,11 @@
 var Firebase = require('firebase');
 var appConstants = require('../constants/appConstants');
 
+var firebaseHost = 'https://youtube-react-radio.firebaseio.com/'
+
 var firebaseUtils = {
   homeInstance: function() {
-    return new Firebase(appConstants.FIREBASE_HOST);
+    return new Firebase(firebaseHost);
   },
   addId: function(youttubeId) {
     //TODO: sandbox per user

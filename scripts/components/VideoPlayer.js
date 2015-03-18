@@ -35,11 +35,16 @@ var VideoPlayer = React.createClass({
 
   getSuggestions: function()
   {
-    youtubeUtils.getSuggestions(this.props.id, this.addSuggestions);
+    youtubeUtils.getSuggestions(this.state.id, this.addSuggestions);
   },
 
   onVideoEnd: function() {
     var randomId = this.state.queuedIds[Math.floor(Math.random() * 3)]
+    if (!randomId)
+    {
+      debugger;
+      window.location.reload();
+    }
     this.setState({
       id: randomId,
       queuedIds: []

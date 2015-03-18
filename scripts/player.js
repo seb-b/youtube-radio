@@ -15,8 +15,10 @@ var Player = React.createClass({
 
   render: function() {
     return (
-      <div className="player">
-        <VideoPlayer id={this.state.videoId} />
+      <div className="playerContainer">
+        <div className="player">
+          <VideoPlayer id={this.state.videoId} />
+        </div>
       </div>
     );
   }
