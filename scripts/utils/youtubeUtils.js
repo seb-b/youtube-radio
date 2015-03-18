@@ -12,7 +12,7 @@ var youtubeUtils = {
 
   getSuggestions: function(id, cb)
   {
-    var url = `https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=${id}&key=${googleApiKey}&type=video&maxResults=3`;
+    var url = `https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=${id}&key=${googleApiKey}&type=video&maxResults=5`;
     doAjax(url, cb);
   }
 

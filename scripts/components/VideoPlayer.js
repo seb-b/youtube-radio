@@ -1,7 +1,8 @@
 var React = require('react');
 var Youtube = require('react-youtube');
 var youtubeUtils = require('../utils/youtubeUtils');
-var Navigation = require('react-router').Navigation
+var Navigation = require('react-router').Navigation;
+var Glyphicon = require('react-bootstrap').Glyphicon;
 
 var VideoPlayer = React.createClass({
 
@@ -39,7 +40,8 @@ var VideoPlayer = React.createClass({
   },
 
   onVideoEnd: function() {
-    var randomId = this.state.queuedIds[Math.floor(Math.random() * 3)]
+    var possible = this.state.queuedIds;
+    var randomId = possible[Math.floor(Math.random() * possible.length)];
     if (!randomId)
     {
       debugger;
@@ -53,7 +55,17 @@ var VideoPlayer = React.createClass({
 
   render: function() {
     return (
-      <Youtube autoplay={true} url={`http://www.youtube.com/watch?v=${this.state.id}`} onPlay={this.getSuggestions} onEnd={this.onVideoEnd} />
+      <div>
+      <Youtube
+        autoplay={true}
+        url={`http://www.youtube.com/watch?v=${this.state.id}`}
+        onPlay={this.getSuggestions}
+        onEnd={this.onVideoEnd} />
+      <a
+        className="next"
+        onClick={this.onVideoEnd}>
+        <Glyphicon glyph="forward" /></a>
+        </div>
     );
   }
 });
