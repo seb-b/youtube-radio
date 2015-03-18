@@ -10,7 +10,6 @@ var Footer = React.createClass({
   handleAdd: function()
   {
     //TODO: validation
-    debugger;
     var url = this.refs.add.getValue();
     var startIndex = url.indexOf('v=') + 2;
     var id = url.substr(startIndex, startIndex + 11);

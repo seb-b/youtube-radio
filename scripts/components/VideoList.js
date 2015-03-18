@@ -7,12 +7,17 @@ var Row = ReactBootstrap.Row;
 
 var VideoList = React.createClass({
   propTypes: {
-    videoIds: React.PropTypes.array.isRequired
+    videoIds: React.PropTypes.array.isRequired,
+    deleteCallBack: React.PropTypes.func
   },
 
   render: function() {
     var videoList = this.props.videoIds.map((id, index) => {
-      return <VideoListItem videoId={id} key={index} />
+      return (<VideoListItem
+                videoId={id}
+                key={index}
+                deleteCallback={this.props.deleteCallback} />
+          );
     });
     return (
 

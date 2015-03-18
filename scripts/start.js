@@ -10,12 +10,18 @@ var Start = React.createClass({
     };
   },
 
+  getVideoIds: function(){
+    debugger;
+    firebaseUtils.getIds(this.receivedIds);
+  },
+
   componentWillMount: function() {
-    var initIds = firebaseUtils.getIds(this.receivedIds);
+    this.getVideoIds();
   },
 
   receivedIds: function(data)
   {
+    debugger;
     this.setState({
       ids: data
     });
@@ -24,7 +30,7 @@ var Start = React.createClass({
   render: function() {
     return (
       <div className="start">
-        <VideoList videoIds={this.state.ids} />
+        <VideoList videoIds={this.state.ids} deleteCallback={this.getVideoIds} />
       </div>
     );
   }
